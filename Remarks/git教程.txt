@@ -1,2 +1,36 @@
 http://rogerdudler.github.io/git-guide/index.zh.html
 
+
+cmd 基本流程 1
+
+
+1、 md 创建文件夹
+2、 git init 创建为空仓库
+3、 git clone username@host:/path/to/repository  克隆远程服务器的仓库
+4、 赋值项目文件到此文件夹下
+5、 git add . 添加所有文件
+6、 git commit -m '描述'
+7、 git push origin master 提交到远程服务器
+
+
+cmd 基本流程 2
+
+1、 md 创建文件夹
+2、 git init 创建为空仓库
+3、 赋值项目文件到此文件夹下
+4、 git add . 添加所有文件
+5、 git commit -m '描述'
+6、 git remote origin <Server> 添加远程服务器
+7、 git push origin master 提交到远程服务器
+
+
+gitClient 基本流程
+
+1、 添加本地库，或者创建库，或者克隆仓库
+2、 添加文件及修改
+3、 pull request
+4、 commit 
+5、 publish 或者 Sync
+
+
+
