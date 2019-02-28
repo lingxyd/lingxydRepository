@@ -1,0 +1,20 @@
+            var totalMoney = $('#ContractTotalMoney').text();
+            var payMoney = $('#tbPayBackMoney').val();
+            var costMoney = $('#tbProjectCost').val();
+            
+            if (floatObj.subtract(totalMoney, payMoney) < 0) {
+                alert('回款金额不能大于合同总金额！');
+                $('#tbPayBackMoney').focus();
+                return;
+            }
+            if (floatObj.subtract(payMoney, costMoney) < 0) {
+                alert('项目成本不能大于回款金额！');
+                $('#tbProjectCost').focus();
+                return;
+            }
+            if ($.isNumeric(payMoney) && $.isNumeric(costMoney)) {
+                var performanceBaseMoney = floatObj.subtract(floatObj.multiply(payMoney, 0.8), costMoney);
+                if (performanceBaseMoney < 0) {
+                    alert('绩效基数不能小于0！');
+                }
+                $('#lbPerformanceBase').text(performanceBaseMoney);
